@@ -1,0 +1,15 @@
+header {
+  text-align: center;
+  position: sticky;
+  img {
+    width: 12%;
+  }
+  nav {
+    display: inline;
+    margin-left: 200px;
+    .NavItem {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+  }
+}

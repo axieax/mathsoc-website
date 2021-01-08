@@ -1,8 +1,11 @@
 import React from 'react';
+import './Footer.scss'
 
 function Footer() {
     return (
-        <p>Bye</p>
+        <footer>
+            <p>Bye</p>
+        </footer>
     );
 }
 
