@@ -1,11 +1,12 @@
 header {
   text-align: center;
-  position: sticky;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
   img {
     width: 12%;
   }
   nav {
-    display: inline;
     margin-left: 200px;
     font-size: 16px;
     text-decoration: none;
@@ -22,3 +23,4 @@ header {
     }
   }
 }
+// link (e.g. hover)

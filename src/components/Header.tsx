@@ -6,7 +6,7 @@ import './Header.scss'
 
 interface NavItemProps {
     link: string;
-    value: string;
+    value: string | object;
 }
 
 const NavLinkStyle = {
@@ -38,9 +38,7 @@ class Header extends React.Component {
                     <NavItem link='/sponsors' value='Sponsors'/>
                     <NavItem link='/resources' value='Resources'/>
                     <NavItem link='/quiz' value='Weekly Questions'/>
-                    <Link to='/contact'>
-                        <Button value='Contact Us'/>
-                    </Link>
+                    <NavItem link='/contact' value={<Button value='Contact Us'/>}/>
                 </nav>
             </header>
             </>
