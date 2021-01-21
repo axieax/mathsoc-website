@@ -6,23 +6,27 @@ import './Home.scss'
 
 function Hero() {
     return (
-        <>
-        <h1>Welcome to UNSW Mathematics Society!</h1>
-        <div>
-            <h2>1234</h2>
-            <h3>Members</h3>
-            <Link to='/about'>
-                <Button value='Learn more about us'/>
-            </Link>
+        <div className='Hero'>
+            <div className="welcome">
+                <h1>Welcome to UNSW Mathematics Society!</h1>
+            </div>
+            <div className="statbox">
+                <div className='HeroStat'>
+                    <h2>1234</h2>
+                    <h3>Members</h3>
+                    <Link to='/about'>
+                        <Button>Learn more about us</Button>
+                    </Link>
+                </div>
+                <div className='HeroStat'>
+                    <h2>1234</h2>
+                    <h3>Facebook Likes</h3>
+                    <a href='https://www.facebook.com/unswmathsoc'>
+                        <Button>Like us on Facebook</Button>
+                    </a>
+                </div>
+            </div>
         </div>
-        <div>
-            <h2>1234</h2>
-            <h3>Facebook Likes</h3>
-            <a href='https://www.facebook.com/unswmathsoc'>
-                <Button value='Like us on Facebook'/>
-            </a>
-        </div>
-        </>
     );
 }
 
@@ -68,6 +72,9 @@ class Home extends React.Component {
                 <Banner info={middleBanner}/>
                 <Banner info={rightBanner}/>
             </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rhoncus, erat consectetur varius bibendum, dui leo imperdiet urna, a pellentesque nibh mi non felis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Quisque euismod nisi et nisi ultrices, non elementum nisl iaculis. Pellentesque non pharetra orci, id suscipit nisl. Donec in est consectetur, sagittis est in, fermentum massa. Proin tristique scelerisque tincidunt. Phasellus ultrices ipsum consectetur, ultricies enim in, rutrum ligula. Praesent tincidunt, justo eu faucibus scelerisque, erat dui tincidunt lectus, vel commodo sem libero id turpis. Praesent at nisi vulputate purus tempus tristique.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rhoncus, erat consectetur varius bibendum, dui leo imperdiet urna, a pellentesque nibh mi non felis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Quisque euismod nisi et nisi ultrices, non elementum nisl iaculis. Pellentesque non pharetra orci, id suscipit nisl. Donec in est consectetur, sagittis est in, fermentum massa. Proin tristique scelerisque tincidunt. Phasellus ultrices ipsum consectetur, ultricies enim in, rutrum ligula. Praesent tincidunt, justo eu faucibus scelerisque, erat dui tincidunt lectus, vel commodo sem libero id turpis. Praesent at nisi vulputate purus tempus tristique.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rhoncus, erat consectetur varius bibendum, dui leo imperdiet urna, a pellentesque nibh mi non felis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Quisque euismod nisi et nisi ultrices, non elementum nisl iaculis. Pellentesque non pharetra orci, id suscipit nisl. Donec in est consectetur, sagittis est in, fermentum massa. Proin tristique scelerisque tincidunt. Phasellus ultrices ipsum consectetur, ultricies enim in, rutrum ligula. Praesent tincidunt, justo eu faucibus scelerisque, erat dui tincidunt lectus, vel commodo sem libero id turpis. Praesent at nisi vulputate purus tempus tristique.</p>
             </>
         );
     }

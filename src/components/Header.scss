@@ -1,26 +1,48 @@
 header {
-  text-align: center;
-  position: fixed;
-  justify-content: center;
-  align-items: center;
-  img {
-    width: 12%;
+  background-color: green;
+  margin: 0px 400px;
+  display: flex;
+  justify-content: space-between;
+  .logo {
+    img {
+      width: 12%;
+    }
   }
   nav {
-    margin-left: 200px;
-    font-size: 16px;
-    text-decoration: none;
+    background-color: yellow;
     .NavItem {
-      margin-left: 10px;
-      margin-right: 10px;
+      margin: 0px 10px;
       display: inline;
-    }
-    button {
-      color: #1b1840;
-    }
-    #NavEvents {
-      background-color: blue;
     }
   }
 }
-// link (e.g. hover)
+
+
+
+// header {
+//   margin: 0px 100px;
+//   text-align: center;
+//   position: fixed;
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+  
+//   nav {
+//     display: inline;
+//     margin-left: 200px;
+//     font-size: 16px;
+//     text-decoration: none;
+//     .NavItem {
+//       margin-left: 10px;
+//       margin-right: 10px;
+//       display: inline;
+//     }
+//     button {
+//       color: #1b1840;
+//     }
+//     #NavEvents {
+//       background-color: blue;
+//     }
+//   }
+// }
+// // link (e.g. hover)

@@ -1,3 +1,26 @@
+.Hero {
+  align-items: center;
+  text-align: center;
+  margin: 50px 200px;
+  padding: 50px;
+  display: grid;
+  grid-template-rows: auto auto;
+  .welcome {
+    margin-bottom: 50px;
+    h1 {
+      text-align: center;
+    }
+  }
+  .statbox {
+    margin: 0px 550px;
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+}
+
+
 .EventsBox {
-  display: flex;
+  margin: 100px 200px;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
 }

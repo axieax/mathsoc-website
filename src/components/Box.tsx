@@ -67,10 +67,10 @@ function Banner(props: BannerProps) {
                 <h4>{currView.category}</h4>
                 <h2>{currView.title}</h2>
                 <p>{currView.description}</p>
-                <a href={currView.link}>
-                    <Button value={currView.buttonText}/>
-                </a>
             </div>
+            <a href={currView.link}>
+                <Button>{currView.buttonText}</Button>
+            </a>
             {multipleViews && (
                 <button className='right' onClick={() => setActiveView((isLastPage) ? activeView : activeView + 1)}>
                     Right

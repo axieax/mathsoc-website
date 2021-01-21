@@ -2,13 +2,13 @@ import React from 'react';
 import './Button.scss';
 
 interface ButtonProps {
-    value: string;
+    children?: any;
 }
 
 function Button(props: ButtonProps) {
     return (
         <button type='button' className='Button'>
-            {props.value}
+            {props.children}
         </button>
     )
 }

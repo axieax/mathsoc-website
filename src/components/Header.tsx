@@ -6,7 +6,7 @@ import './Header.scss'
 
 interface NavItemProps {
     link: string;
-    value: string | object;
+    children?: any;
 }
 
 const NavLinkStyle = {
@@ -18,33 +18,32 @@ function NavItem(props: NavItemProps) {
     return (
         <div className="NavItem">
             <Link to={props.link} style={NavLinkStyle}>
-                {props.value}
+                {props.children}
             </Link>
         </div>
     );
 } 
 
 
-class Header extends React.Component {
-    render() {
-        return (
-            <>
-            <header>
+function Header() {
+    return (
+        <header>
+            <div className="logo">
                 <Link to='/'>
                     <img src={logo} alt='MathSoc Logo'/>
                 </Link>
-                <nav>
-                    <NavItem key='NavEvents' link='/events' value='Events'/>
-                    <NavItem link='/sponsors' value='Sponsors'/>
-                    <NavItem link='/resources' value='Resources'/>
-                    <NavItem link='/quiz' value='Weekly Questions'/>
-                    <NavItem link='/contact' value={<Button value='Contact Us'/>}/>
-                </nav>
-            </header>
-            </>
-        );
-    }
+            </div>
+            <nav>
+                <NavItem link='/events'>Events</NavItem>
+                <NavItem link='/sponsors'>Sponsors</NavItem>
+                <NavItem link='/resources'>Resources</NavItem>
+                <NavItem link='/quiz'>Weekly Questions</NavItem>
+                <NavItem link='/contact'>
+                    <Button>Contact Us</Button>
+                </NavItem>
+            </nav>
+        </header>
+    )
 }
-
 
 export default Header;
