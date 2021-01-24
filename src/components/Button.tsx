@@ -8,7 +8,7 @@ interface ButtonProps {
 
 function Button(props: ButtonProps) {
     return (
-        <button type='button' className='Button' onClick={props.onClick}>
+        <button onClick={props.onClick}>
             {props.children}
         </button>
     )

@@ -21,7 +21,7 @@ function Hero() {
                 <div className='HeroStat'>
                     <h2>1234</h2>
                     <h3>Facebook Likes</h3>
-                    <a href='https://www.facebook.com/unswmathsoc'>
+                    <a href='https://www.facebook.com/unswmathsoc' target='_blank' rel='noreferrer'>
                         <Button>Like us on Facebook</Button>
                     </a>
                 </div>
