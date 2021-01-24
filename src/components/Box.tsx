@@ -8,6 +8,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 interface ViewBarProps {
     activeView: number;
     numViews: number;
+    setActiveView: any; // function
 }
 
 function ViewBar(props: ViewBarProps) {
@@ -15,15 +16,15 @@ function ViewBar(props: ViewBarProps) {
     for (let i = 0; i < props.numViews; i++) {
         if (i === props.activeView) {
             bar.push(
-                <div className="ViewIcon">
+                <Button onClick={() => props.setActiveView(i)}>
                     <FontAwesomeIcon icon={solidCircle}/>
-                </div>
+                </Button>
             );
         } else {
             bar.push(
-                <div className="ViewIcon">
+                <Button onClick={() => props.setActiveView(i)}>
                     <FontAwesomeIcon icon={regularCircle}/>
-                </div>
+                </Button>
             );
         }
     }
@@ -60,7 +61,7 @@ function Banner(props: BannerProps) {
         <div className="Banner">
             {multipleViews && (
                 <button className='left' onClick={() => setActiveView((isFirstPage) ? activeView : activeView - 1)}>
-                    Left
+                    &lt;
                 </button>
             )}
             <div className="InfoBox">
@@ -73,11 +74,11 @@ function Banner(props: BannerProps) {
             </a>
             {multipleViews && (
                 <button className='right' onClick={() => setActiveView((isLastPage) ? activeView : activeView + 1)}>
-                    Right
+                    &gt;
                 </button>
             )}
             {multipleViews && (
-                <ViewBar activeView={activeView} numViews={numViews}/>
+                <ViewBar activeView={activeView} numViews={numViews} setActiveView={setActiveView}/>
             )}
         </div>
     );

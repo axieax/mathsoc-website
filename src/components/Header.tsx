@@ -10,19 +10,9 @@ interface NavItemProps {
 }
 
 const NavLinkStyle = {
-    textDecoration: 'none',
+    // textDecoration: 'none',
     color: '#1b1840',
 }
-
-function NavItem(props: NavItemProps) {
-    return (
-        <div className="NavItem">
-            <Link to={props.link} style={NavLinkStyle}>
-                {props.children}
-            </Link>
-        </div>
-    );
-} 
 
 
 function Header() {
@@ -32,15 +22,28 @@ function Header() {
                 <Link to='/'>
                     <img src={logo} alt='MathSoc Logo'/>
                 </Link>
+                {/* Mathsoc */}
             </div>
             <nav>
-                <NavItem link='/events'>Events</NavItem>
-                <NavItem link='/sponsors'>Sponsors</NavItem>
-                <NavItem link='/resources'>Resources</NavItem>
-                <NavItem link='/quiz'>Weekly Questions</NavItem>
-                <NavItem link='/contact'>
-                    <Button>Contact Us</Button>
-                </NavItem>
+                <ul>
+                    <li>
+                        <Link to={'/events'}>Events</Link>
+                    </li>
+                    <li>
+                        <Link to={'/sponsors'}>Sponsors</Link>
+                    </li>
+                    <li>
+                        <Link to={'/resources'}>Resources</Link>
+                    </li>
+                    <li>
+                        <Link to={'/quiz'}>Weekly Questions</Link>
+                    </li>
+                    <li>
+                        <Link to={'/contact'}>
+                            <Button>Contact Us</Button>
+                        </Link>
+                    </li>
+                </ul>
             </nav>
         </header>
     )

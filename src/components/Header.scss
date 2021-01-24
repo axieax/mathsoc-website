@@ -1,48 +1,31 @@
 header {
-  background-color: green;
-  margin: 0px 400px;
+  // position
+  top: 0;
+  position: sticky;
+  margin: 0 6%;
+  padding: 10px 3%;
+  // layout
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  // style
+  background-color: white;
+  box-shadow: 0 3.5px 2px -2px rgba(27, 24, 64, 0.37);
+  backdrop-filter: blur(40px);
+  -webkit-backdrop-filter: blur(4px);
   .logo {
     img {
-      width: 12%;
+      height: 80px;
     }
   }
   nav {
-    background-color: yellow;
-    .NavItem {
+    li {
       margin: 0px 10px;
-      display: inline;
+      display: inline-block;
+    }
+    a {
+      text-decoration: none;
+      color: #1b1840;
     }
   }
 }
-
-
-
-// header {
-//   margin: 0px 100px;
-//   text-align: center;
-//   position: fixed;
-//   display: flex;
-//   justify-content: space-between;
-//   align-items: center;
-  
-//   nav {
-//     display: inline;
-//     margin-left: 200px;
-//     font-size: 16px;
-//     text-decoration: none;
-//     .NavItem {
-//       margin-left: 10px;
-//       margin-right: 10px;
-//       display: inline;
-//     }
-//     button {
-//       color: #1b1840;
-//     }
-//     #NavEvents {
-//       background-color: blue;
-//     }
-//   }
-// }
-// // link (e.g. hover)

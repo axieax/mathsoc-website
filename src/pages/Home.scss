@@ -1,26 +1,27 @@
 .Hero {
-  align-items: center;
-  text-align: center;
+  // position
   margin: 50px 200px;
   padding: 50px;
-  display: grid;
-  grid-template-rows: auto auto;
+  // layout
+  align-items: center;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
   .welcome {
     margin-bottom: 50px;
-    h1 {
-      text-align: center;
-    }
   }
   .statbox {
-    margin: 0px 550px;
-    display: grid;
-    grid-template-columns: auto auto;
+    .HeroStat {
+      margin: 5px 20px;
+      display: inline-block;
+      vertical-align: middle;
+    }
   }
 }
 
-
 .EventsBox {
-  margin: 100px 200px;
+  margin: 100px 5%;
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
+  align-items: center;
 }

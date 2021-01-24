@@ -23,15 +23,17 @@ function App() {
   return (
     <Router>
       <Header/>
-      <Switch>
-        <Route exact path='/' component={Home}/>
-        <Route exact path='/about' component={About}/>
-        <Route exact path='/events' component={Events}/>
-        <Route exact path='/sponsors' component={Sponsors}/>
-        <Route exact path='/resources' component={Resources}/>
-        <Route exact path='/quiz' component={Quiz}/>
-        <Route exact path='/contact' component={Contact}/>
-      </Switch>
+      <div className="bodyContainer">
+        <Switch>
+          <Route exact path='/' component={Home}/>
+          <Route exact path='/about' component={About}/>
+          <Route exact path='/events' component={Events}/>
+          <Route exact path='/sponsors' component={Sponsors}/>
+          <Route exact path='/resources' component={Resources}/>
+          <Route exact path='/quiz' component={Quiz}/>
+          <Route exact path='/contact' component={Contact}/>
+        </Switch>
+      </div>
       <Footer/>
     </Router>
   );
