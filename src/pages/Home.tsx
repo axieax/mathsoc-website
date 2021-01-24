@@ -65,17 +65,19 @@ class Home extends React.Component {
         }]
         
         return (
-            <>
-            <Hero/>
-            <div className="EventsBox">
-                <Banner info={leftBanner}/>
-                <Banner info={middleBanner}/>
-                <Banner info={rightBanner}/>
+            <div className="Home">
+                <Hero/>
+                <div className="EventsWrapper">
+                    <div className="EventsBox">
+                        <Banner info={leftBanner}/>
+                        <Banner info={middleBanner}/>
+                        <Banner info={rightBanner}/>
+                    </div>
+                </div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rhoncus, erat consectetur varius bibendum, dui leo imperdiet urna, a pellentesque nibh mi non felis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Quisque euismod nisi et nisi ultrices, non elementum nisl iaculis. Pellentesque non pharetra orci, id suscipit nisl. Donec in est consectetur, sagittis est in, fermentum massa. Proin tristique scelerisque tincidunt. Phasellus ultrices ipsum consectetur, ultricies enim in, rutrum ligula. Praesent tincidunt, justo eu faucibus scelerisque, erat dui tincidunt lectus, vel commodo sem libero id turpis. Praesent at nisi vulputate purus tempus tristique.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rhoncus, erat consectetur varius bibendum, dui leo imperdiet urna, a pellentesque nibh mi non felis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Quisque euismod nisi et nisi ultrices, non elementum nisl iaculis. Pellentesque non pharetra orci, id suscipit nisl. Donec in est consectetur, sagittis est in, fermentum massa. Proin tristique scelerisque tincidunt. Phasellus ultrices ipsum consectetur, ultricies enim in, rutrum ligula. Praesent tincidunt, justo eu faucibus scelerisque, erat dui tincidunt lectus, vel commodo sem libero id turpis. Praesent at nisi vulputate purus tempus tristique.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rhoncus, erat consectetur varius bibendum, dui leo imperdiet urna, a pellentesque nibh mi non felis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Quisque euismod nisi et nisi ultrices, non elementum nisl iaculis. Pellentesque non pharetra orci, id suscipit nisl. Donec in est consectetur, sagittis est in, fermentum massa. Proin tristique scelerisque tincidunt. Phasellus ultrices ipsum consectetur, ultricies enim in, rutrum ligula. Praesent tincidunt, justo eu faucibus scelerisque, erat dui tincidunt lectus, vel commodo sem libero id turpis. Praesent at nisi vulputate purus tempus tristique.</p>
             </div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rhoncus, erat consectetur varius bibendum, dui leo imperdiet urna, a pellentesque nibh mi non felis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Quisque euismod nisi et nisi ultrices, non elementum nisl iaculis. Pellentesque non pharetra orci, id suscipit nisl. Donec in est consectetur, sagittis est in, fermentum massa. Proin tristique scelerisque tincidunt. Phasellus ultrices ipsum consectetur, ultricies enim in, rutrum ligula. Praesent tincidunt, justo eu faucibus scelerisque, erat dui tincidunt lectus, vel commodo sem libero id turpis. Praesent at nisi vulputate purus tempus tristique.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rhoncus, erat consectetur varius bibendum, dui leo imperdiet urna, a pellentesque nibh mi non felis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Quisque euismod nisi et nisi ultrices, non elementum nisl iaculis. Pellentesque non pharetra orci, id suscipit nisl. Donec in est consectetur, sagittis est in, fermentum massa. Proin tristique scelerisque tincidunt. Phasellus ultrices ipsum consectetur, ultricies enim in, rutrum ligula. Praesent tincidunt, justo eu faucibus scelerisque, erat dui tincidunt lectus, vel commodo sem libero id turpis. Praesent at nisi vulputate purus tempus tristique.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rhoncus, erat consectetur varius bibendum, dui leo imperdiet urna, a pellentesque nibh mi non felis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Quisque euismod nisi et nisi ultrices, non elementum nisl iaculis. Pellentesque non pharetra orci, id suscipit nisl. Donec in est consectetur, sagittis est in, fermentum massa. Proin tristique scelerisque tincidunt. Phasellus ultrices ipsum consectetur, ultricies enim in, rutrum ligula. Praesent tincidunt, justo eu faucibus scelerisque, erat dui tincidunt lectus, vel commodo sem libero id turpis. Praesent at nisi vulputate purus tempus tristique.</p>
-            </>
         );
     }
 }
