@@ -4,9 +4,15 @@ import './Footer.scss'
 function Footer() {
     return (
         <footer>
-            Facebook
-            <p>© UNSW Mathematics Society 2021</p>
-            Arc
+            <div className="Facebook">
+                Facebook
+            </div>            
+            <div className="Copyright">
+                © UNSW Mathematics Society 2021
+            </div>
+            <div className="Arc">
+                Arc
+            </div>
         </footer>
     );
 }

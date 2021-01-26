@@ -18,11 +18,13 @@ import Sponsors from './pages/Sponsors';
 import Resources from './pages/Resources';
 import Quiz from './pages/Quiz';
 import Contact from './pages/Contact';
+import NavBar from './components/NavBar';
 
 function App() {
   return (
     <Router>
-      <Header/>
+      <NavBar/>
+      {/* <Header/> */}
       <div className="bodyContainer">
         <Switch>
           <Route exact path='/' component={Home}/>
@@ -32,6 +34,8 @@ function App() {
           <Route exact path='/resources' component={Resources}/>
           <Route exact path='/quiz' component={Quiz}/>
           <Route exact path='/contact' component={Contact}/>
+          {/* temporary 404 */}
+          <Route component={() => <>404</>}/>
         </Switch>
       </div>
       <Footer/>

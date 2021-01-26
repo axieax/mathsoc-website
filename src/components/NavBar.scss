@@ -1,0 +1,96 @@
+$header-height: 80px;
+
+// header contains brand, menuIcon, navItems (expanded?)
+header {
+    // position
+    top: 0;
+    position: sticky;
+    margin: 0 5px;
+    height: $header-height;
+    // layout
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    img {
+        height: $header-height;
+    }
+    a {
+        text-decoration: none;
+        color: black;
+    }
+    ul {
+        list-style: none;
+    }
+    i {
+        cursor: pointer;
+    }
+    .fa-caret-down {
+        display: none;
+    }
+    .menuIcon {
+        display: none;
+        margin: 5px 8px;
+    }
+    .navItems {
+        display: flex;
+        li:hover {
+            text-decoration: underline;
+            text-decoration-color: red;
+        }
+        .NavItem {
+            margin: 5px 10px;
+            display: inline-block;
+            .dropdown {
+                position: absolute;
+                margin: 4px 0;
+                background-color: lightgray;
+            }
+        }
+        .contact {
+            display: none;
+        }
+        button {
+            margin: 5px 8px;
+        }
+    }
+}
+
+
+@media screen and (max-width: 820px) {
+    header {
+        .menuIcon {
+            display: block;
+        }
+        .fa-caret-down {
+            display: inline-block;
+            margin-left: 4px;
+        }
+        .navItems {
+            display: none;
+            .contact {
+                // put in expanded?
+                display: block;
+            }
+        }
+        .navItems.expanded {
+            // position
+            position: absolute;
+            top: $header-height;
+            // layout
+            display: flex;
+            flex-direction: column;
+            // style
+            background-color: rgba(0, 0, 0, 0.15);
+            .NavItem {
+                .dropdown {
+                    position: relative;
+                    background-color: lightgray;
+                }
+            }
+            button {
+                display: none;
+            }
+        }
+        z-index: 10000;
+    }
+}

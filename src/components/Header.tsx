@@ -22,7 +22,6 @@ function Header() {
                 <Link to='/'>
                     <img src={logo} alt='MathSoc Logo'/>
                 </Link>
-                {/* Mathsoc */}
             </div>
             <nav>
                 <ul>
