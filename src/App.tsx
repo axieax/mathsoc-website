@@ -7,7 +7,7 @@ import {
 import './App.scss';
 
 // components
-import Header from './components/Header';
+import NavBar from './components/NavBar';
 import Footer from './components/Footer';
 
 // pages
@@ -18,13 +18,11 @@ import Sponsors from './pages/Sponsors';
 import Resources from './pages/Resources';
 import Quiz from './pages/Quiz';
 import Contact from './pages/Contact';
-import NavBar from './components/NavBar';
 
 function App() {
   return (
     <Router>
       <NavBar/>
-      {/* <Header/> */}
       <div className="bodyContainer">
         <Switch>
           <Route exact path='/' component={Home}/>
