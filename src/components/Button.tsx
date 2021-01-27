@@ -5,11 +5,12 @@ interface ButtonProps {
     onClick?: any; // function
     children?: any;
     style?: object;
+    className?: string;
 }
 
 function Button(props: ButtonProps) {
     return (
-        <button style={props.style} onClick={props.onClick}>
+        <button className={props.className} style={props.style} onClick={props.onClick}>
             {props.children}
         </button>
     )

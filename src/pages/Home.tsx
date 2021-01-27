@@ -1,9 +1,11 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import Button from '../components/Button';
-import Banner from '../components/Box';
+import Banner from '../components/Banner';
 import './Home.scss'
 import tft from '../assets/tft.jpg';
+import tile from '../assets/tile.png';
+import Tile from '../components/Tile';
 
 function Hero() {
     return (
@@ -116,12 +118,48 @@ function EventsBox() {
 }
 
 
+function StudentBox() {
+    // NOTE: Tile images need to be of constant dimensions, e.g. 300x400px
+    return (
+        <div className="StudentBox">
+            <div className="studentHub">
+                <h2>Student Hub</h2>
+                <div className="studentBoxes">
+                    <Link to="/events">
+                        <Tile title={'Events'} img={tile}/>
+                    </Link>
+                    <Link to="/resources">
+                        <Tile title={'Resources'} img={tile}/>
+                    </Link>
+                    <Link to="/quiz">
+                        <Tile title={'Weekly Questions'} img={tile}/>
+                    </Link>
+                </div>
+            </div>
+            <div className="formBox">
+                <h2>Form</h2>
+            </div>
+        </div>
+    );
+}
+
+function SponsorBox() {
+    return (
+        <div className="SponsorBox">
+            <h2>Our Sponsors</h2>
+        </div>
+    );
+}
+
+
 
 function Home() {
     return (
         <div className="Home">
             <Hero/>
             <EventsBox/>
+            <StudentBox/>
+            <SponsorBox/>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rhoncus, erat consectetur varius bibendum, dui leo imperdiet urna, a pellentesque nibh mi non felis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Quisque euismod nisi et nisi ultrices, non elementum nisl iaculis. Pellentesque non pharetra orci, id suscipit nisl. Donec in est consectetur, sagittis est in, fermentum massa. Proin tristique scelerisque tincidunt. Phasellus ultrices ipsum consectetur, ultricies enim in, rutrum ligula. Praesent tincidunt, justo eu faucibus scelerisque, erat dui tincidunt lectus, vel commodo sem libero id turpis. Praesent at nisi vulputate purus tempus tristique.</p>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rhoncus, erat consectetur varius bibendum, dui leo imperdiet urna, a pellentesque nibh mi non felis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Quisque euismod nisi et nisi ultrices, non elementum nisl iaculis. Pellentesque non pharetra orci, id suscipit nisl. Donec in est consectetur, sagittis est in, fermentum massa. Proin tristique scelerisque tincidunt. Phasellus ultrices ipsum consectetur, ultricies enim in, rutrum ligula. Praesent tincidunt, justo eu faucibus scelerisque, erat dui tincidunt lectus, vel commodo sem libero id turpis. Praesent at nisi vulputate purus tempus tristique.</p>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rhoncus, erat consectetur varius bibendum, dui leo imperdiet urna, a pellentesque nibh mi non felis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Quisque euismod nisi et nisi ultrices, non elementum nisl iaculis. Pellentesque non pharetra orci, id suscipit nisl. Donec in est consectetur, sagittis est in, fermentum massa. Proin tristique scelerisque tincidunt. Phasellus ultrices ipsum consectetur, ultricies enim in, rutrum ligula. Praesent tincidunt, justo eu faucibus scelerisque, erat dui tincidunt lectus, vel commodo sem libero id turpis. Praesent at nisi vulputate purus tempus tristique.</p>

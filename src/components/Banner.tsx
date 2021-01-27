@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Button from './Button';
-import './Box.scss';
+import './Banner.scss';
 
 function ViewBar({activeView, panels, setActiveView} : {activeView: number, panels: Array<any>, setActiveView: Function}) {
     return (
@@ -30,7 +30,11 @@ function Banner({info}: {info: BannerInfo}) {
 
     return (
         <div className="Banner">
-            {numViews > 1 && <Button onClick={() => setActiveView((activeView - 1) % numViews)}>&lt;</Button>}
+            {numViews > 1 &&
+                <Button className='bannerSide' onClick={() => setActiveView((activeView - 1) % numViews)}>
+                    &lt;
+                </Button>
+            }
             <div className="content">
                 <div className="category">
                     <h4>{info.category}</h4>
@@ -38,10 +42,13 @@ function Banner({info}: {info: BannerInfo}) {
                 {info.panels[activeView]}
                 {numViews > 1 && <ViewBar activeView={activeView} panels={info.panels} setActiveView={setActiveView}/>}
             </div>
-            {numViews > 1 && <Button onClick={() => setActiveView((activeView + 1) % numViews)}>&gt;</Button>}
+            {numViews > 1 &&
+                <Button className='bannerSide' onClick={() => setActiveView((activeView + 1) % numViews)}>
+                    &gt;
+                </Button>
+            }
         </div>
     );
 }
-
 
 export default Banner;

@@ -4,7 +4,8 @@
   position: relative;
   .Hero {
     // position
-    margin: 50px 0 120px 0;
+    margin: 80px 0 120px 0;
+    padding: 0 50px;
     // layout
     align-items: center;
     text-align: center;
@@ -24,12 +25,39 @@
     }
   }
   .EventsBox {
-    margin: 40px 0;
+    margin: 80px 0;
+    padding: 0 50px;
     display: flex;
     justify-content: center;
     align-self: center;
     align-items: center;
-    width: 100%;
+    // width: 100%;
+  }
+  .StudentBox {
+    background-color: rgba($secondary, 0.7);
+    margin: 80px 0;
+    padding: 5% 16%;
+    .studentHub {
+      .studentBoxes {
+        margin: 40px 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 8%;
+        a {
+          text-decoration: none;
+          color: black;
+        }
+      }
+    }
+    .formBox {
+      background-color: palegreen;
+      margin: 50px 5%;
+      text-align: center;
+    }
+  }
+  .SponsorBox {
+    margin: 80px 0;
+    padding: 5% 16%;
   }
 }
 
@@ -37,7 +65,7 @@
 @media screen and (max-width: $mobile-width) {
   .Home {
     .Hero {
-      margin: 0;
+      margin: 40px 0 0 0;
       .statbox {
         .HeroStat {
           margin: 5px 5px;
@@ -46,6 +74,17 @@
     }
     .EventsBox {
       flex-direction: column;
+    }
+    .StudentBox {
+      padding: 5% 3.14%;
+      .studentHub {
+        .studentBoxes {
+          column-gap: 4%;
+        }
+      }
+      .formBox {
+        margin: 50px 0;
+      }
     }
   }
 }

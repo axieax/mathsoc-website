@@ -23,7 +23,6 @@ function App() {
   return (
     <Router>
       <NavBar/>
-      <div className="bodyContainer">
         <Switch>
           <Route exact path='/' component={Home}/>
           <Route exact path='/about' component={About}/>
@@ -35,7 +34,6 @@ function App() {
           {/* temporary 404 */}
           <Route component={() => <>404</>}/>
         </Switch>
-      </div>
       <Footer/>
     </Router>
   );
