@@ -1,87 +1,47 @@
 import React, { useState } from 'react';
 import Button from './Button';
 import './Box.scss';
-import { faCircle as solidCircle } from '@fortawesome/free-solid-svg-icons';
-import { faCircle as regularCircle } from '@fortawesome/free-regular-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-interface ViewBarProps {
-    activeView: number;
-    numViews: number;
-    setActiveView: any; // function
-}
-
-function ViewBar(props: ViewBarProps) {
-    let bar = [];
-    for (let i = 0; i < props.numViews; i++) {
-        if (i === props.activeView) {
-            bar.push(
-                <Button onClick={() => props.setActiveView(i)}>
-                    <FontAwesomeIcon icon={solidCircle}/>
-                </Button>
-            );
-        } else {
-            bar.push(
-                <Button onClick={() => props.setActiveView(i)}>
-                    <FontAwesomeIcon icon={regularCircle}/>
-                </Button>
-            );
-        }
-    }
+function ViewBar({activeView, panels, setActiveView} : {activeView: number, panels: Array<any>, setActiveView: Function}) {
     return (
         <div className="ViewBar">
-            {bar}
+            {panels.map((panel, index) => {
+                return (
+                    (index === activeView) ? (
+                        <i className="fas fa-circle" onClick={() => setActiveView(index)}/>
+                    ) : (
+                        <i className="far fa-circle" onClick={() => setActiveView(index)}/>
+                    )
+                );
+            })}
         </div>
     );
 }
 
 
-
-interface ViewProps {
-    category: string;
-    title: string;
-    description: string;
-    link: string;
-    buttonText: string;
+interface BannerInfo {
+    category: string,
+    panels: Array<any>,
 }
 
-interface BannerProps {
-    info: Array<ViewProps>;
-}
-
-function Banner(props: BannerProps) {
-    const numViews = props.info.length;
+function Banner({info}: {info: BannerInfo}) {
+    const numViews = info.panels.length;
     const [activeView, setActiveView] = useState(0);
-    const currView = props.info[activeView];
-    const multipleViews = (numViews > 1);
-    const isFirstPage = (activeView === 0);
-    const isLastPage = (activeView === numViews - 1);
-    
+
     return (
         <div className="Banner">
-            {multipleViews && (
-                <button className='left' onClick={() => setActiveView((isFirstPage) ? activeView : activeView - 1)}>
-                    &lt;
-                </button>
-            )}
-            <div className="InfoBox">
-                <h4>{currView.category}</h4>
-                <h2>{currView.title}</h2>
-                <p>{currView.description}</p>
+            {numViews > 1 && <Button onClick={() => setActiveView((activeView - 1) % numViews)}>&lt;</Button>}
+            <div className="content">
+                <div className="category">
+                    <h4>{info.category}</h4>
+                </div>
+                {info.panels[activeView]}
+                {numViews > 1 && <ViewBar activeView={activeView} panels={info.panels} setActiveView={setActiveView}/>}
             </div>
-            <a href={currView.link}>
-                <Button>{currView.buttonText}</Button>
-            </a>
-            {multipleViews && (
-                <button className='right' onClick={() => setActiveView((isLastPage) ? activeView : activeView + 1)}>
-                    &gt;
-                </button>
-            )}
-            {multipleViews && (
-                <ViewBar activeView={activeView} numViews={numViews} setActiveView={setActiveView}/>
-            )}
+            {numViews > 1 && <Button onClick={() => setActiveView((activeView + 1) % numViews)}>&gt;</Button>}
         </div>
     );
 }
+
 
 export default Banner;

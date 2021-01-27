@@ -98,8 +98,8 @@ function NavItem({item, closeMenu, className} : navItemProps) {
     };
 
     // hover
-    const hoverExpand = () => setExpandedDropdown(window.innerWidth >= 820);
-    const hoverClose = () => {(window.innerWidth >= 820) && closeMenus()};
+    const hoverExpand = () => setExpandedDropdown(window.innerWidth >= 860);
+    const hoverClose = () => {(window.innerWidth >= 860) && closeMenus()}; // mobile glitchy?
 
     return (
         <li className={className ? className : "NavItem"} onMouseEnter={hoverExpand} onMouseLeave={hoverClose}>
@@ -124,8 +124,15 @@ export default function NavBar() {
     const toggle = () => setExpandedMenu(!expandedMenu);
     const closeMenu = () => setExpandedMenu(false);
 
+    const [stuck, setStuck] = useState(false);
+    window.addEventListener('scroll', () => setStuck(window.scrollY >= 80));
+    const stuckStyle = {
+        backgroundColor: 'white',
+        boxShadow: '1px 3px 20px 0 rgba(0, 0, 0, 0.25)',
+    }
+
     return (
-        <header>
+        <header style={stuck ? stuckStyle : {}}>
             <div className="brand">
                 <Link to='/' onClick={closeMenu}>
                     <img src={logo} alt='MathSoc Logo'/>
