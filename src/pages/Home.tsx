@@ -119,7 +119,7 @@ function EventsBox() {
 
 
 function StudentBox() {
-    // NOTE: Tile images need to be of constant dimensions, e.g. 300x400px
+    // NOTE: Tile images need to be of constant dimensions, e.g. 300x350px
     return (
         <div className="StudentBox">
             <div className="studentHub">

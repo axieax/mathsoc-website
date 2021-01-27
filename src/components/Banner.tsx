@@ -8,9 +8,9 @@ function ViewBar({activeView, panels, setActiveView} : {activeView: number, pane
             {panels.map((panel, index) => {
                 return (
                     (index === activeView) ? (
-                        <i className="fas fa-circle"/>
+                        <i className="fas fa-circle active"/>
                     ) : (
-                        <i className="far fa-circle" onClick={() => setActiveView(index)}/>
+                        <i className="fas fa-circle inactive" onClick={() => setActiveView(index)}/>
                     )
                 );
             })}
