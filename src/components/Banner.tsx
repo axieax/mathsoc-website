@@ -31,7 +31,7 @@ function Banner({info}: {info: BannerInfo}) {
     return (
         <div className="Banner">
             {numViews > 1 &&
-                <Button className='bannerSide' onClick={() => setActiveView((activeView - 1) % numViews)}>
+                <Button className='bannerSide' onClick={() => {activeView > 0 && setActiveView(activeView - 1)}}>
                     &lt;
                 </Button>
             }
@@ -43,7 +43,7 @@ function Banner({info}: {info: BannerInfo}) {
                 {numViews > 1 && <ViewBar activeView={activeView} panels={info.panels} setActiveView={setActiveView}/>}
             </div>
             {numViews > 1 &&
-                <Button className='bannerSide' onClick={() => setActiveView((activeView + 1) % numViews)}>
+                <Button className='bannerSide' onClick={() => {(activeView < numViews - 1) && setActiveView(activeView + 1)}}>
                     &gt;
                 </Button>
             }

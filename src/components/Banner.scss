@@ -23,7 +23,7 @@
     font-size: 24px;
   }
   .content {
-    padding: 1em;
+    padding: 14px;
     box-sizing: border-box;
     height: 100%;
     width: 100%;
@@ -31,16 +31,17 @@
     justify-content: space-between;
     flex-direction: column;
     img {
+      margin: 8px 0;
       max-width:100%;
       max-height:100%;
     }
     .title, .category {
       text-align: left;
-      margin-bottom: 0.5em;
+      margin-bottom: 0.3em;
     }
     .description {
-      margin-top: 0.8em;
-      margin-bottom: 0.6em;
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
       text-align: left;
     }
     .action {
@@ -48,7 +49,8 @@
     }
     .ViewBar {
       text-align: center;
-      margin-top: 1.2em;
+      margin-top: 1em;
+      font-size: 14px;
       i {
         margin: 0 0.15em;
       }
@@ -64,7 +66,7 @@
     }
   }
   button {
-    margin: 0 0.1em;
+    margin: 0.2em 0.1em;
   }
 }
 
