@@ -1,4 +1,5 @@
 @import "../variables.scss";
+$logo-width: 232.641px;
 
 // header contains brand, menuIcon, navItems (expanded?)
 header {
@@ -14,6 +15,7 @@ header {
     align-items: center;
     img {
         height: $navbar-height;
+        width: $logo-width;
     }
     a {
         text-decoration: none;
@@ -31,6 +33,7 @@ header {
     .menuIcon {
         display: none;
         margin: 5px 8px;
+        font-size: 21px;
     }
     .navItems {
         display: flex;
@@ -45,8 +48,12 @@ header {
             display: inline-block;
             .dropdown {
                 position: absolute;
-                padding: 4px 0;
+                padding: 0 0.3em;
                 background-color: lightgray;
+                border-radius: 8px;
+                li {
+                    margin: 0.2em 0;
+                }
             }
         }
         .contact {
@@ -79,11 +86,12 @@ header {
                 // position
                 position: absolute;
                 top: $navbar-height;
+                width: $logo-width;
                 // layout
                 display: flex;
                 flex-direction: column;
                 // style
-                background-color: rgba(0, 0, 0, 0.45);
+                background-color: rgba(gray, 0.7);
                 .NavItem {
                     text-align: center;
                     .dropdown {

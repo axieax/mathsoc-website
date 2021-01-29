@@ -21,6 +21,17 @@ body {
   }
 }
 
+.bodyContainer {
+  margin: 40px 0;
+  padding: 3% 16%;
+}
+.bodyStrip {
+  background-color: rgba($secondary, 0.7);
+  margin: 40px 0;
+  padding: 3% 16%;
+}
+
+
 @media screen and (max-width: $mobile-width) {
   body {
     h1 {
@@ -38,6 +49,12 @@ body {
     p {
       font-size: 14px;
     }
+  }
+  .bodyContainer {
+    padding: 3% 6%;
+  }
+  .bodyStrip {
+    padding: 3% 6%;
   }
 }
 

@@ -30,8 +30,8 @@ const links = [
                 route: '/events/upcoming',
             },
             {
-                name: 'Past Events',
-                route: '/events/past',
+                name: 'Previous Events',
+                route: '/events/previous',
             },
         ]
     },
@@ -71,7 +71,7 @@ const contactItem = {
 /* SUBCOMPONENTS */
 function DropdownItem({item, onClick} : {item: subpageObject, onClick: any}) {
     return (
-        <li>
+        <li className="DropdownItem">
             <Link to={item.route} onClick={onClick}>
                 {item.name}
             </Link>
